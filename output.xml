@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.12 on darwin)" generated="20231217 14:53:35.373" rpa="true" schemaversion="4">
+<suite id="s1" name="Tasks" source="/Users/simonfrank/Documents/dev/python/robots/rpa/tasks.robot">
+<test id="s1-t1" name="Complete the challenge" line="18">
+<kw name="Start the challenge">
+<kw name="Open Available Browser" library="LocatorFixer.SeleniumLocatorFixer">
+<arg>http://rpachallenge.com/</arg>
+<doc>Attempts to open a browser on the user's device from a set of
+supported browsers. Automatically downloads a corresponding webdriver
+if none is already installed.</doc>
+<msg timestamp="20231217 14:53:43.085" level="INFO">Downloaded webdriver to: /Users/simonfrank/.robocorp/webdrivers/.wdm/drivers/chromedriver/mac64/120.0.6099.71/chromedriver-mac-x64/chromedriver</msg>
+<msg timestamp="20231217 14:53:43.377" level="INFO">Webdriver version taken into use: ChromeDriver 120.0.6099.71 (9729082fe6174c0a371fc66501f5efc5d69d3d2b-refs/branch-heads/6099_56@{#13})
+</msg>
+<msg timestamp="20231217 14:53:43.473" level="INFO">Targeted browser version: 120.0.6099</msg>
+<msg timestamp="20231217 14:53:43.475" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg timestamp="20231217 14:53:47.217" level="INFO">Created Chrome browser with arguments: --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox</msg>
+<msg timestamp="20231217 14:53:47.217" level="INFO" html="true">&lt;p&gt;Attempted combinations:&lt;/p&gt;&lt;div class="doc"&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Browser&lt;/th&gt;&lt;th&gt;Download&lt;/th&gt;&lt;th&gt;Error&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;False&lt;/td&gt;&lt;td&gt;Message: Webdriver executable 'chromedriver' is not in PATH (with disabled Selenium Manager)
+&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Chrome&lt;/td&gt;&lt;td&gt;True&lt;/td&gt;&lt;td&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;</msg>
+<msg timestamp="20231217 14:53:47.218" level="INFO">Opening url 'http://rpachallenge.com/'</msg>
+<status status="PASS" starttime="20231217 14:53:42.600" endtime="20231217 14:53:49.691"/>
+</kw>
+<kw name="Find Element" library="RPA.Desktop">
+<arg>Download Exel</arg>
+<doc>Find an element defined by locator, and return its position.
+Raises ``ElementNotFound`` if` no matches were found, or
+``MultipleElementsFound`` if there were multiple matches.</doc>
+<msg timestamp="20231217 14:53:49.695" level="INFO">Resolving locator: Download Exel</msg>
+<msg timestamp="20231217 14:53:49.715" level="FAIL">ValueError: No locator with name: Download</msg>
+<status status="FAIL" starttime="20231217 14:53:49.693" endtime="20231217 14:53:49.755"/>
+</kw>
+<kw name="Download" library="RPA.HTTP">
+<arg>http://rpachallenge.com/assets/downloadFiles/challenge.xlsx</arg>
+<arg>overwrite=True</arg>
+<doc>An alias for the ``HTTP Get`` keyword.</doc>
+<status status="NOT RUN" starttime="20231217 14:53:49.755" endtime="20231217 14:53:49.756"/>
+</kw>
+<kw name="Click Button" library="LocatorFixer.SeleniumLocatorFixer">
+<arg>Start</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231217 14:53:49.756" endtime="20231217 14:53:49.757"/>
+</kw>
+<status status="FAIL" starttime="20231217 14:53:42.599" endtime="20231217 14:53:49.757"/>
+</kw>
+<kw name="Fill the forms">
+<status status="NOT RUN" starttime="20231217 14:53:49.759" endtime="20231217 14:53:49.759"/>
+</kw>
+<kw name="Collect the results">
+<status status="NOT RUN" starttime="20231217 14:53:49.761" endtime="20231217 14:53:49.761"/>
+</kw>
+<status status="FAIL" starttime="20231217 14:53:42.598" endtime="20231217 14:53:49.761">ValueError: No locator with name: Download</status>
+</test>
+<doc>Robot to solve the first challenge at rpachallenge.com,
+which consists of filling a form that randomly rearranges
+itself for ten times, with data taken from a provided
+Microsoft Excel file.</doc>
+<status status="FAIL" starttime="20231217 14:53:35.385" endtime="20231217 14:53:49.762"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tasks</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tasks">Tasks</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,7 +1,7 @@
 
 from robocorp.tasks import task
 from robocorp.tasks import get_output_dir
-from robocorp import vault
+from RPA.Robocorp.Vault import Vault
 from robocorp import log
 from RPA.Browser.Selenium import Selenium
 from RPA.HTTP import HTTP
@@ -19,7 +19,7 @@ import traceback
 OUTPUT_DIR = get_output_dir()
 
 gpt = OpenAI()
-vault = vault()
+vault = Vault()
 
 class SeleniumLocatorFixer(Selenium):
     def __init__(self, *args, **kwargs):

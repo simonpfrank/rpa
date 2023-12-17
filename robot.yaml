@@ -3,7 +3,7 @@
 
 tasks:
   RPA Challenge with automatic locator fixing:
-    shell: python -m robocorp.tasks run tasks.py
+    shell: python -m robocorp.tasks run task.py
 
 environmentConfigs:
   - environment_windows_amd64_freeze.yaml

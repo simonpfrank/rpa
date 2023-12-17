@@ -1,4 +1,4 @@
-# Self fixing web automation for locators in rpaframework & Selenium (POC)#
+# Self fixing web automation for locators in rpaframework & Selenium (POC)
 This POC attempts to create a new class based on Selenium which decorates the core element finder with a function that traps an ElementNotFound error and attempts to send the locator and the html to openai to get it to  return a good xpath locator, which it tests.
 
 If the locator tests OK, then the automation script will continue from where the error occurred.
@@ -7,7 +7,7 @@ This was inspired by Krzysztof Karaszewski’s post on linkedin:
 https://www.linkedin.com/feed/update/urn:li:activity:7130576929530810368/, 
 where he produced the same thing in UiPath.
 
-####Notes###
+#### Notes
 The method to decorate/wrap the specific method in Selenium to achieve this
 was hard to achieve as it took some research to try and establish what the base
 method was. The actual wrapping is not as elegant as it could be, but it was
@@ -30,7 +30,7 @@ https://cloud.robocorp.com/personalsrn9u/development/settings and the
 Credential id from here https://cloud.robocorp.com/settings/access-credentials
 (after viewing the token).
 
-#### Limitations: ###
+#### Limitations:
 * only wraps single find method, not tested with finding multiple elements
 * doesn't handle locator aliases (in locators.json) but can be modified to do that
 * it's not guaranteed the openai prompt will work for other pages, it had to be
